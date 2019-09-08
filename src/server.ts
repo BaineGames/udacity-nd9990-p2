@@ -33,7 +33,7 @@ import {filterImageFromURL, deleteLocalFiles, isUrl} from './util/util';
 
   app.get( "/filteredimage", async ( req, res ) => {
     //query parameter from requirement
-    const { image_url } = req.query;
+    let image_url:string = req.query.image_url;
 
     // requirement 1. validate image_url query - test if exists
     if(!image_url){
